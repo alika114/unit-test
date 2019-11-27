@@ -1,0 +1,21 @@
+{
+  "name": "unittest",
+  "version": "1.0.0",
+  "description": "unit tetsing using mocha and chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "test-mocha": "mocha"
+  },
+  "author": "aki",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.1",
+    "request": "^2.88.0"
+  }
+}
