@@ -1,24 +1,13 @@
-var expect  = require('chai').expect;
-var request = require('request');
+const control = require('../contoller/control')
 
 describe('Status and content', function() {
     describe ('Main page', function() {
-        it('status', function(done){
-            request('http://localhost:8080/', function(error, response, body) {
-                expect(response.statusCode).to.equal(200);
-                done();
-            });
-        });
+        it('status', control.status);
 
-        it('content', function(done) {
-            request('http://localhost:8080/' , function(error, response, body) {
-                expect(body).to.equal('Hello World');
-                done();
-            });
-        });
+        it('content', control.content);
     });
 
-    describe ('About page', function() {
+    /*describe ('About page', function() {
         it('status', function(done){
             request('http://localhost:8080/about', function(error, response, body) {
                 expect(response.statusCode).to.equal(404);
@@ -26,5 +15,5 @@ describe('Status and content', function() {
             });
         });
 
-    });
+    });*/
 });
